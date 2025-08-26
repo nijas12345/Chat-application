@@ -4,7 +4,7 @@
 
 /* index.css */
 .scrollbar-thin::-webkit-scrollbar {
-  width: 4px;   /* very thin */
+  width: 4px; /* very thin */
 }
 
 .scrollbar-thin::-webkit-scrollbar-track {

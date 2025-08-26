@@ -45,7 +45,7 @@ function Register() {
     }
     try {
       const response = await register(formData);
-      toast.success(response.message)
+      toast.success(response.message);
     } catch (error) {
       const message =
         error.response?.data?.message ||

@@ -3,10 +3,10 @@ import Register from "./pages/register";
 import Login from "./pages/login";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import Home from './pages/home'
-import ProtectedRoute from "./components/protectedRoute";
+import Home from "./pages/home";
 import AppWrapper from "./components/appWrapper";
-import PublicRoute from "./components/publicRoute";
+import PublicRoute from "./routes/publicRoute";
+import ProtectedRoute from "./routes/protectedRoute";
 
 function App() {
   return (

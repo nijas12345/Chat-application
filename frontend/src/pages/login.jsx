@@ -7,7 +7,7 @@ import { loginSuccess } from "../redux/slices/authSlice";
 
 function Login() {
   const navigate = useNavigate();
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
   const [formData, setFormData] = useState({
     email: "",
     password: "",
@@ -17,21 +17,25 @@ function Login() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = async(e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    const {email,password} = formData;
-    if(!email.trim()){
-      toast.error("Email is required")
+    const { email, password } = formData;
+    if (!email.trim()) {
+      toast.error("Email is required");
     }
-    if(!password.trim()){
+    if (!password.trim()) {
       toast.error("Password is required");
     }
     try {
       const res = await login(formData);
+      console.log("res", res);
+
       dispatch(loginSuccess(res));
-      
-      navigate('/');
+
+      navigate("/");
     } catch (error) {
+      console.log(error.message);
+
       const message =
         error.response?.data?.message ||
         error.message ||

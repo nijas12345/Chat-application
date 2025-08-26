@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { Users } from "lucide-react";
+import { MessageCircle } from "lucide-react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchConversationById } from "../redux/slices/selectedConversationSlice";
 import { fetchConversations } from "../redux/slices/conversationSlice";
@@ -33,8 +33,8 @@ export default function Conversation({ onOpenChat, isMobile }) {
       } h-screen bg-indigo-50 shadow-lg p-2 flex flex-col border-r border-purple-400`}
     >
       <div className="flex items-center gap-2 mb-2">
-        <Users className="text-indigo-700" />
-        <h2 className="text-lg text-indigo-800 font-semibold truncate">
+        <MessageCircle className="text-indigo-700" />
+        <h2 className="text-lg p-1 text-indigo-800 font-semibold truncate">
           Conversations
         </h2>
       </div>
