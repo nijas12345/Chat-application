@@ -2,7 +2,7 @@
 
 A real-time chat application where users can register, log in, and have conversations with each other. The application supports multiple users, conversation management, and real-time messaging. User authentication is handled using **HTTP-only cookies** instead of localStorage for enhanced security against XSS attacks.
 
----
+--- 
 
 ## Tech Stack
 
